@@ -21,5 +21,3 @@ class Stack {
         return this.items.length
     }
 }
-
-console.log(Stack)
