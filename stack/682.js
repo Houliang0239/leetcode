@@ -20,7 +20,6 @@ function calPoints(ops) {
                 break
         }
     }
-    console.log(ans)
     return ans
 }
 let ops =  ["5","-2","4","C","D","9","+","+"]
