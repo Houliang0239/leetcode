@@ -6,7 +6,7 @@
  * (al) -> al
  */
 function interpret(command = '') {
-    return command.replaceAll('()','o').replaceAll('(al)','al')
+    return command.replace(/\(\)/g,'o').replace(/\(al\)/g,'al')
 }
 
 let command = '(al)G(al)()()G'

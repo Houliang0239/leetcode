@@ -1,4 +1,3 @@
-
 /**
  * 
  * @param {*} array 
@@ -6,19 +5,21 @@
  */
 
 
-function sort(array){
-    let middle = array.splice(Math.floor(array.length / 2),1)
-    let left = [],right = []
-    for (let i = 0;i<array.length;i++){
-        if(array[i] < middle){
+function sort(array) {
+    if (array.length < 2) return array
+    let middle = array.splice(Math.floor(array.length / 2), 1)
+    let left = [],
+        right = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] < middle) {
             left.push(array[i])
-        }else {
+        } else {
             right.push(array[i])
         }
     }
-    return sort(left).concat(middle).concat(right)
+    return sort(left).concat(middle).concat(sort(right))
 }
-let array = [3, 1, 5, 7, 6, 9, 3, 5, 7, 8, 0,-1]
+let array = [3, 1, 5, 7, 6, 9, 3, 5, 7, 8, 0, -1]
 let result = sort(array)
 console.log(result)
 
@@ -26,3 +27,4 @@ console.log(result)
 /**
  * 优化版本
  */
+
