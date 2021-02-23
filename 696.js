@@ -1,4 +1,4 @@
-let str = "11001100";
+ let str = "11001100";
 
 function countBinarySubstrings(s) {
     let answer = 0;
